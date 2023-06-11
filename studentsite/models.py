@@ -1,7 +1,5 @@
 from django.db import models
-
 from django.contrib.auth.models import User, UserManager
-from pytz import timezone
 
 
 class Student(models.Model):
