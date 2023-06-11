@@ -7,8 +7,14 @@
 <div class="container_items home_info">
     <div class="container_head">
         <div class="main_container">
-
+            {% if not student_list%}
+            <div class="error-container">
+                <h1>No information available</h1>
+            </div>
+            {% else %}
             {% for student in student_list %}
+
+
             <div class="home_info_static">
                 <div class="profile_pic">
                     <img src="{{ student.profile_pic.url }}" height="100px" width="100px" style="border-radius: 75px;"
@@ -422,7 +428,9 @@
 
 
             </section>
+
             {% endfor %}
+            {% endif %}
         </div>
     </div>
 </div>

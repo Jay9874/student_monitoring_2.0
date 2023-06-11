@@ -12,7 +12,6 @@ def student_home(request):
     # total_subjects = Subjects.objects.filter(student_id=student.id)
 
     # subject_name = []
-
     context = {
         "student_list": student
     }

@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
+load_dotenv()
 # Don't forget to import dj-database-url at the beginning of the file
 import dj_database_url
 
@@ -40,15 +42,13 @@ INSTALLED_APPS = [
     'loginsite.apps.LoginsiteConfig',
     'studentsite.apps.StudentsiteConfig',
     'achievements.apps.AchievementsConfig',
-
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-
+    'active_link',
 ]
 
 MIDDLEWARE = [

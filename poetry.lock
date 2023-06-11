@@ -144,6 +144,17 @@ argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
+name = "django-active-link"
+version = "0.1.8"
+description = "The best way to highlight active links in your Django app."
+optional = false
+python-versions = "*"
+files = [
+    {file = "django-active-link-0.1.8.tar.gz", hash = "sha256:87aac58cc89913ff3b017b91cb24cda0dbb05945aa46c6a1428d0744b56a3e1f"},
+    {file = "django_active_link-0.1.8-py2.py3-none-any.whl", hash = "sha256:a6a94f92e9150d05be4491e10e5dfb3274c08dd88866081f5f90ea2d738db647"},
+]
+
+[[package]]
 name = "gunicorn"
 version = "20.1.0"
 description = "WSGI HTTP Server for UNIX"
@@ -314,6 +325,20 @@ files = [
 ]
 
 [[package]]
+name = "python-dotenv"
+version = "1.0.0"
+description = "Read key-value pairs from a .env file and set them as environment variables"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "python-dotenv-1.0.0.tar.gz", hash = "sha256:a8df96034aae6d2d50a4ebe8216326c61c3eb64836776504fcca410e5937a3ba"},
+    {file = "python_dotenv-1.0.0-py3-none-any.whl", hash = "sha256:f5971a9226b701070a4bf2c38c89e5a3f0d64de8debda981d1db98583009122a"},
+]
+
+[package.extras]
+cli = ["click (>=5.0)"]
+
+[[package]]
 name = "setuptools"
 version = "67.8.0"
 description = "Easily download, build, install, upgrade, and uninstall Python packages"
@@ -387,4 +412,4 @@ brotli = ["Brotli"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "679bfa1838b75213a478a55d205d4de6179ba1fd0e22420d3bb71202904f338c"
+content-hash = "f1e615510042fd28fe9c45659e883fe002f83757ec56b5f042c5f5d258f2ee7b"
