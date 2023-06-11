@@ -1,7 +1,7 @@
 databases:
   - name: student_monitoring
     databaseName: student_monitoring
-    user: Jay9874
+    user: student_monitoring
 
 services:
   - type: web
