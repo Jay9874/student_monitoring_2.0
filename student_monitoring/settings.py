@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'student_monitoring.wsgi.application'
 DATABASES = {
 
     'default': dj_database_url.config(
-        default='postgresql://postgres:postgres@localhost:5432/student_monitoring',
+        default=os.environ.get('DATABASE_URL'),
         conn_max_age=600
     )
 }
