@@ -1,15 +1,3 @@
-from cProfile import label
-import email
-from logging import PlaceHolder
-from multiprocessing.sharedctypes import Value
-from turtle import ondrag
-from django.conf import settings
-from random import choices
-from email.policy import default
-from sre_constants import CATEGORY
-from django import forms
-from django.db.models.signals import post_save
-from django.dispatch import receiver
 from django.db import models
 
 from django.contrib.auth.models import User, UserManager

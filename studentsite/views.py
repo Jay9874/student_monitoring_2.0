@@ -1,12 +1,6 @@
-from ast import Sub
 from django.shortcuts import render
-from django.http import HttpResponseRedirect, HttpResponse
+from django.http import HttpResponseRedirect
 from django.urls import reverse
-from django.contrib import messages
-from django.core.files.storage import FileSystemStorage
-from matplotlib.style import context
-from pandas import read_sql_query
-from sklearn import model_selection
 from .models import Student, Score, Cocurriculum, Achievement, Remark
 
 
