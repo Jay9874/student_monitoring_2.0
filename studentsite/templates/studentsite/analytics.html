@@ -1,0 +1,246 @@
+{% extends "studentsite/layout.html" %}
+{% load static %}
+
+{% block container %}
+
+
+<div class="container_for_all container_charts">
+  <div class="for_margin_right">
+    <div class="all_container_header analytics_header">
+      <h1 class="main_container_heading analytics_heading">Shapes of Your Marks</h1>
+    </div>
+    <section class="section_for_analytics">
+
+
+      <div class="chartBox Box">
+        <div class="for_margin_border">
+          <canvas id="myChart" height="300px"></canvas>
+        </div>
+      </div>
+      <div class="chartBox Box">
+        <div class="for_margin_border">
+          <canvas id="myChart1" height="300px"></canvas>
+        </div>
+      </div>
+
+      <div class="container_for_discover">
+        <div class="container_for_discover_header">
+            <div class="container_discover_heading">
+                <div class="another_container_discover_heading">
+                    <h2 class="main_heading_of_discover">
+                        <span></span>
+                        DISCOVER
+                    </h2>
+                </div>
+                <p class="container_for_description">
+                    This section is for recommendations, quotes and study material to utilize it.
+                    You can consider it, giving a watch.
+                </p>
+            </div>
+            <figure class="container_for_svg">
+                <img class="main_svg_discover" src="{% static 'studentsite/subscribe.svg' %}"
+                    style="width: 360px; height: 128px;" alt="svg">
+            </figure>
+        </div>
+
+    </div>
+
+    <!-- html for the first discover -->
+    <div class="container_for_discover_content">
+        <div class="for_discover_content_margin">
+            <div class="for_content_header_devider">
+                <div class="for_content_header_and_button">
+                    <div class="for_content_description_heading">
+                        <div class="heading_header">
+                            <div class="header_h3">
+                                <h3 class="h3_of_content">How to stay in a pace</h3>
+                            </div>
+                            <div class="button_for_content_link">
+                              <figure class="figure_for_more">
+                                <a class="link_for_more" href="">
+                                    <i class="material-icons">chevron_right</i>
+                                </a>
+                            </figure>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="for_content_description">
+                    <div class="for_main_content_description">
+                        <div class="for_description_flex">
+                            <p class="container_for_description">
+                                Increasing your concentration while studying have lots of impact on your future.
+                                Check these videos, showing the ways of making up your goals.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ends here -->
+
+
+
+
+    <!-- hmtl for the second discover -->
+    <div class="container_for_discover_content">
+        <div class="for_discover_content_margin">
+            <div class="for_content_header_devider">
+                <div class="for_content_header_and_button">
+                    <div class="for_content_description_heading">
+                        <div class="heading_header">
+                            <div class="header_h3">
+                                <h3 class="h3_of_content">A simple way to stay healthy</h3>
+                            </div>
+                            <div class="button_for_content_link">
+                              <figure class="figure_for_more">
+                                <a class="link_for_more" href="">
+                                    <i class="material-icons">chevron_right</i>
+                                </a>
+                            </figure>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="for_content_description">
+                    <div class="for_main_content_description">
+                        <div class="for_description_flex">
+                            <p class="container_for_description">
+                                Here are the datas of World Health Organization which recommend, 
+                                a healthy body needs a better sleep and should have a right amount.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ends here -->
+
+
+
+    <!-- html for the 3rd discover -->
+    <div class="container_for_discover_content">
+        <div class="for_discover_content_margin">
+            <div class="for_content_header_devider">
+                <div class="for_content_header_and_button">
+                    <div class="for_content_description_heading">
+                        <div class="heading_header">
+                            <div class="header_h3">
+                                <h3 class="h3_of_content">How to increse rank</h3>
+                            </div>
+                            <div class="button_for_content_link">
+                              <figure class="figure_for_more">
+                                <a class="link_for_more" href="">
+                                    <i class="material-icons">chevron_right</i>
+                                </a>
+                            </figure>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="for_content_description">
+                    <div class="for_main_content_description">
+                        <div class="for_description_flex">
+                            <p class="container_for_description">
+                                Here is a blog for you which eplains the way of achieving concentration in study and make a better
+                                schedule.
+                               
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ends here -->
+
+    </section>
+
+
+
+
+
+
+
+    <script>
+      const ctx = document.getElementById('myChart').getContext('2d');
+      const myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Physics', 'Maths', 'Biology', 'Chemistry', 'Hindi', 'English', 'Sanskrit'],
+          datasets: [{
+            label: 'Marks',
+            data: [89, 98, 70, 86, 76, 92, 84],
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(255, 206, 86, 0.2)',
+              'rgba(75, 192, 192, 0.2)'
+            ],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+              'rgba(153, 102, 255, 1)',
+              'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+
+          }
+        }
+      });
+
+      const ctx1 = document.getElementById('myChart1').getContext('2d');
+      const myChart1 = new Chart(ctx1, {
+        type: 'polarArea',
+        data: {
+          labels: ['Physics', 'Maths', 'Biology', 'Chemistry', 'Hindi', 'English', 'Social Science'],
+          datasets: [{
+            label: 'Marks',
+            data: [89, 98, 77, 76, 76, 78, 84],
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(255, 206, 86, 0.2)',
+              'rgba(75, 192, 192, 0.2)'
+            ],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+              'rgba(153, 102, 255, 1)',
+              'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+
+    </script>
+
+  </div>
+</div>
+
+
+{% endblock %}

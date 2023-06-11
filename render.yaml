@@ -1,0 +1,20 @@
+databases:
+  - name: student_monitoring
+    databaseName: student_monitoring
+    user: Jay9874
+
+services:
+  - type: web
+    name: student_monitoring
+    runtime: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn student_monitoring.wsgi:application"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: student_monitoring
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 4
