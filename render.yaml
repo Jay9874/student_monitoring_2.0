@@ -1,0 +1,28 @@
+# Exported from Render on 2024-05-05T21:19:35Z
+databases:
+- name: student_monitoring
+  databaseName: student_monitoring
+  user: jay
+  plan: free
+  region: oregon
+  ipAllowList:
+  - source: 0.0.0.0/0
+    description: everywhere
+  postgresMajorVersion: "16"
+version: "1"
+
+services:
+  - type: web
+    plan: free
+    name: student_monitoring
+    runtime: python
+    buildCommand: "./build.sh"
+    startCommand: "python -m gunicorn student_monitoring.asgi:application -k uvicorn.workers.UvicornWorker"    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: student_monitoring
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 4
