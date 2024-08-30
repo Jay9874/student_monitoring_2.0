@@ -25,6 +25,24 @@
     <input class="credentials credentials_login" type="submit" value="Login">
 
 </form>
+<!-- Demo Login form -->
+<form class="credentials_menu" action="{% url 'login' %}" method="post">
+    {% csrf_token %}
+    <input type="hidden" class="credentials credentials_username" type="text" name="username" minlength="4"
+        maxlength="12" placeholder="Student ID" value="ap06">
+    <input type="hidden" class="credentials credentials_password" type="password" name="password" maxlength="12"
+        placeholder="Password" value="ap06">
+    <input class="credentials_demo" type="submit" value="Demo as Student 1">
+</form>
+<!-- Demo Login form -->
+<form class="credentials_menu" action="{% url 'login' %}" method="post">
+    {% csrf_token %}
+    <input type="hidden" class="credentials credentials_username" type="text" name="username" minlength="4"
+        maxlength="12" placeholder="Student ID" value="jay225">
+    <input type="hidden" class="credentials credentials_password" type="password" name="password" maxlength="12"
+        placeholder="Password" value="jay225">
+    <input class="credentials_demo" type="submit" value="Demo as Student 2">
+</form>
 
 <div class="forgot">
 
