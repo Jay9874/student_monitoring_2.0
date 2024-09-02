@@ -1,7 +1,9 @@
 from django.shortcuts import render
+from django.core import serializers
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from .models import Student, Score, Cocurriculum, Achievement, Remark
+import sys; sys.stdout.flush()
 
 
 
@@ -24,12 +26,16 @@ def student_home(request):
 
 def scores(request):
     student = Student.objects.get(student=request.user.id)
-    score = Score.objects.filter(student=student)
+    scores = Score.objects.filter(student=student).values()
+    for value in scores:
+        print(value)
+    # for score in scores:
+    #     print(score.values())
     # semester = Semester.objects.filter(score=score, student=student)
 
     context = {
         "student_list": student,
-        "scores": score,
+        "scores": scores,
         # "semesters": semester 
     }
 

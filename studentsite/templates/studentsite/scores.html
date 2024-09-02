@@ -2,10 +2,11 @@
 {% load static %}
 
 
-
 {% block container %}
 {% for score in scores %}
+
 <div class="container_for_all container_scores">
+
     <div class="for_margin_right">
         <div class="all_container_header scores_header">
             <h1 class="main_container_heading scores_heading">Marks, You Achieved</h1>
@@ -78,7 +79,9 @@
                                     </tr>
                                 </table>
                                 <div class="overall">
-                                    <h3>Total: 578/600</h3>
+                                    <button name="get_total" onclick="(e)=>{console.log('clicked', e)}">Get
+                                        Total</button>
+                                    <h3 name="total_mark" id="total_mark">Total: 578/700</h3>
                                     <h3>Percentage: 82.57%</h3>
                                 </div>
                             </div>
@@ -108,127 +111,123 @@
 
             </div>
 
-             <!-- html for the first discover -->
-    <div class="container_for_discover_content">
-        <div class="for_discover_content_margin">
-            <div class="for_content_header_devider">
-                <div class="for_content_header_and_button">
-                    <div class="for_content_description_heading">
-                        <div class="heading_header">
-                            <div class="header_h3">
-                                <h3 class="h3_of_content">How to stay in a pace</h3>
-                            </div>
-                            <div class="button_for_content_link">
-                              <figure class="figure_for_more">
-                                <a class="link_for_more" href="">
-                                    <i class="material-icons">chevron_right</i>
-                                </a>
-                            </figure>
-                            </div>
-                        </div>
+            <!-- html for the first discover -->
+            <div class="container_for_discover_content">
+                <div class="for_discover_content_margin">
+                    <div class="for_content_header_devider">
+                        <div class="for_content_header_and_button">
+                            <div class="for_content_description_heading">
+                                <div class="heading_header">
+                                    <div class="header_h3">
+                                        <h3 class="h3_of_content">How to stay in a pace</h3>
+                                    </div>
+                                    <div class="button_for_content_link">
+                                        <figure class="figure_for_more">
+                                            <a class="link_for_more" href="">
+                                                <i class="material-icons">chevron_right</i>
+                                            </a>
+                                        </figure>
+                                    </div>
+                                </div>
 
-                    </div>
-                </div>
-                <div class="for_content_description">
-                    <div class="for_main_content_description">
-                        <div class="for_description_flex">
-                            <p class="container_for_description">
-                                Increasing your concentration while studying have lots of impact on your future.
-                                Check these videos, showing the ways of making up your goals.
-
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ends here -->
-
-
-
-
-    <!-- hmtl for the second discover -->
-    <div class="container_for_discover_content">
-        <div class="for_discover_content_margin">
-            <div class="for_content_header_devider">
-                <div class="for_content_header_and_button">
-                    <div class="for_content_description_heading">
-                        <div class="heading_header">
-                            <div class="header_h3">
-                                <h3 class="h3_of_content">A simple way to stay healthy</h3>
-                            </div>
-                            <div class="button_for_content_link">
-                              <figure class="figure_for_more">
-                                <a class="link_for_more" href="">
-                                    <i class="material-icons">chevron_right</i>
-                                </a>
-                            </figure>
                             </div>
                         </div>
+                        <div class="for_content_description">
+                            <div class="for_main_content_description">
+                                <div class="for_description_flex">
+                                    <p class="container_for_description">
+                                        Increasing your concentration while studying have lots of impact on your future.
+                                        Check these videos, showing the ways of making up your goals.
 
-                    </div>
-                </div>
-                <div class="for_content_description">
-                    <div class="for_main_content_description">
-                        <div class="for_description_flex">
-                            <p class="container_for_description">
-                                Here are the datas of World Health Organization which recommend, 
-                                a healthy body needs a better sleep and should have a right amount.
-
-                            </p>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- ends here -->
+            <!-- ends here -->
 
 
 
-    <!-- html for the 3rd discover -->
-    <div class="container_for_discover_content">
-        <div class="for_discover_content_margin">
-            <div class="for_content_header_devider">
-                <div class="for_content_header_and_button">
-                    <div class="for_content_description_heading">
-                        <div class="heading_header">
-                            <div class="header_h3">
-                                <h3 class="h3_of_content">How to increse rank</h3>
-                            </div>
-                            <div class="button_for_content_link">
-                              <figure class="figure_for_more">
-                                <a class="link_for_more" href="">
-                                    <i class="material-icons">chevron_right</i>
-                                </a>
-                            </figure>
+
+            <!-- hmtl for the second discover -->
+            <div class="container_for_discover_content">
+                <div class="for_discover_content_margin">
+                    <div class="for_content_header_devider">
+                        <div class="for_content_header_and_button">
+                            <div class="for_content_description_heading">
+                                <div class="heading_header">
+                                    <div class="header_h3">
+                                        <h3 class="h3_of_content">A simple way to stay healthy</h3>
+                                    </div>
+                                    <div class="button_for_content_link">
+                                        <figure class="figure_for_more">
+                                            <a class="link_for_more" href="">
+                                                <i class="material-icons">chevron_right</i>
+                                            </a>
+                                        </figure>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
+                        <div class="for_content_description">
+                            <div class="for_main_content_description">
+                                <div class="for_description_flex">
+                                    <p class="container_for_description">
+                                        Here are the datas of World Health Organization which recommend,
+                                        a healthy body needs a better sleep and should have a right amount.
 
-                    </div>
-                </div>
-                <div class="for_content_description">
-                    <div class="for_main_content_description">
-                        <div class="for_description_flex">
-                            <p class="container_for_description">
-                                Here is a blog for you which eplains the way of achieving concentration in study and make a better
-                                schedule.
-                               
-
-                            </p>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- ends here -->
+            <!-- ends here -->
 
 
 
+            <!-- html for the 3rd discover -->
+            <div class="container_for_discover_content">
+                <div class="for_discover_content_margin">
+                    <div class="for_content_header_devider">
+                        <div class="for_content_header_and_button">
+                            <div class="for_content_description_heading">
+                                <div class="heading_header">
+                                    <div class="header_h3">
+                                        <h3 class="h3_of_content">How to increse rank</h3>
+                                    </div>
+                                    <div class="button_for_content_link">
+                                        <figure class="figure_for_more">
+                                            <a class="link_for_more" href="">
+                                                <i class="material-icons">chevron_right</i>
+                                            </a>
+                                        </figure>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="for_content_description">
+                            <div class="for_main_content_description">
+                                <div class="for_description_flex">
+                                    <p class="container_for_description">
+                                        Here is a blog for you which eplains the way of achieving concentration in study
+                                        and make a better
+                                        schedule.
 
 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ends here -->
         </section>
     </div>
 

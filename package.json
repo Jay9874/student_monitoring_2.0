@@ -1,0 +1,31 @@
+{
+  "name": "student_monitoring_2.0",
+  "version": "1.0.0",
+  "description": "A student monitoring system.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jay9874/student_monitoring_2.0.git"
+  },
+  "keywords": [
+    "Monitoring"
+  ],
+  "author": "Jay Prakash Sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jay9874/student_monitoring_2.0/issues"
+  },
+  "homepage": "https://github.com/Jay9874/student_monitoring_2.0#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.9.1",
+    "eslint": "^9.9.1",
+    "globals": "^15.9.0"
+  }
+}
