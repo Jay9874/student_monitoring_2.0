@@ -83,21 +83,18 @@ class Score(models.Model):
     chemistry_assingment_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
     biology_exam_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
     biology_assingment_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
-    computer_exam_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
-    computer_assingment_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
+    # computer_exam_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
+    # computer_assingment_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
     hindi_exam_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
     hindi_assingment_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
     english_exam_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
     english_assingment_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
-    history_exam_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
-    history_assingment_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
-    geography_exam_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
-    geography_assingment_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
+    # history_exam_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
+    # history_assingment_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
+    # geography_exam_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
+    # geography_assingment_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
     sanskrit_exam_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
     sanskrit_assingment_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
-
-
-
     objects = models.Manager()
 
 

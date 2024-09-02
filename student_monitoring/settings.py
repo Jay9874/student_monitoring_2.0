@@ -35,8 +35,8 @@ ALLOWED_HOSTS = [f"{APP_NAME}.fly.dev"]
 SECRET_KEY = os.environ.get('SECRET_KEY', default='600f2a1e3c0b202da63563dba46702a0')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = 'RENDER' not in os.environ
-DEBUG = True
+DEBUG = 'RENDER' not in os.environ
+# DEBUG = True
 
 ALLOWED_HOSTS = []
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')

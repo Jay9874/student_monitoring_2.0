@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from collections import defaultdict
 from django.core import serializers
 from django.http import HttpResponseRedirect
 from django.urls import reverse
@@ -27,15 +28,21 @@ def student_home(request):
 def scores(request):
     student = Student.objects.get(student=request.user.id)
     scores = Score.objects.filter(student=student).values()
-    for value in scores:
-        print(value)
-    # for score in scores:
-    #     print(score.values())
-    # semester = Semester.objects.filter(score=score, student=student)
-
+    total = 0
+    percent = 0
+    filteredScore = defaultdict(int)
+    for key, value in scores[0].items():
+        if key not in('id', 'student_id'):
+            total += value
+            subject_name = list(key.split("_"))
+            filteredScore[subject_name[0].capitalize()] += value
+                
+    percent = round((total/700) * 100, 2)
     context = {
         "student_list": student,
-        "scores": scores,
+        "scores": filteredScore.items(),
+        "total": total,
+        "percent": percent
         # "semesters": semester 
     }
 
@@ -47,11 +54,20 @@ def scores(request):
 
 
 def analytics(request):
-    student = Student.objects.filter(student=request.user.id)
-    # # student_result = Score.objects.filter(student_id=student.id)
-
+    student = Student.objects.get(student=request.user.id)
+    scores = Score.objects.filter(student=student).values()
+    filteredScore = {}
+    for key, value in scores[0].items():
+        if key not in('id', 'student_id'):
+            subject_name = list(key.split("_"))[0].capitalize()
+            if subject_name in filteredScore:
+                filteredScore[subject_name] += value
+            else:
+                filteredScore[subject_name] = value
+    print(filteredScore)
     context = {
-        "student_list": student
+        "student_list": student,
+         "scores": filteredScore,
     }
     if not request.user.is_authenticated:
         return HttpResponseRedirect(reverse("login"))
