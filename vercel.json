@@ -2,7 +2,7 @@
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "student_monitoring/wsgi.py"
+        "dest": "api/wsgi.py"
       }
     ]
   }
