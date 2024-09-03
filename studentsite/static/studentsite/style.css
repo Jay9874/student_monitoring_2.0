@@ -5,20 +5,20 @@
 @import url('http://fonts.cdnfonts.com/css/product-sans?styles=15767');
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,500;1,300&display=swap'); */
 
-html{
+html {
     overflow-x: hidden;
 }
 
-div{
+div {
     display: block;
 }
 
-*{
+* {
     font-family: 'Product Sans', sans-serif;
-                                                
+
     -webkit-tap-highlight-color: transparent;
     font-style: normal;
-    font-weight: 400; 
+    font-weight: 400;
     box-sizing: border-box;
     transition: all .2s linear;
 }
@@ -40,16 +40,16 @@ a:-webkit-any-link {
     word-wrap: normal;
     direction: ltr;
     /* -webkit-font-feature-settings: 'liga'; */
-    /* -webkit-font-smoothing: antialiased; */
-/* } */ 
+/* -webkit-font-smoothing: antialiased; */
+/* } */
 
 
 
-th{
+th {
     font-size: larger;
 }
 
-body{
+body {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     margin: 0;
@@ -60,12 +60,12 @@ body{
     letter-spacing: .01428571em;
     font-optical-sizing: none;
     text-size-adjust: 100%;
-    background-color:rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
 }
 
 
-header{
-    /* background-color: rgba(206, 144, 29, 0.363); */
+header {
+    background-color: #ffffffBF;
     backdrop-filter: blur(4px);
     width: 100%;
     position: fixed;
@@ -85,7 +85,7 @@ header{
     box-shadow: var(--box-shadow);
 }
 
-.header_container{
+.header_container {
     padding: 8px 15px;
     transition: background-color .4s;
     box-sizing: border-box;
@@ -97,7 +97,7 @@ header{
 
 }
 
-.school_logo{
+.school_logo {
     /* margin-right: 40vw; */
     padding-right: 30px;
     box-sizing: border-box;
@@ -111,7 +111,7 @@ header{
 
 }
 
-.school_logo_container{
+.school_logo_container {
     -webkit-box-align: center;
     align-items: center;
     display: flex;
@@ -123,10 +123,11 @@ header{
 
 
 
-#school_logo{
+#school_logo {
     height: 35px;
 }
-#school_name h3{
+
+#school_name h3 {
     margin: 0;
     padding-left: 8px;
 }
@@ -135,7 +136,7 @@ header{
 
 /* search container css start here */
 
-.search_container{
+.search_container {
     /* justify-content: flex-start; */
     position: relative;
     flex-wrap: wrap-reverse;
@@ -150,18 +151,18 @@ header{
     display: flex;
 }
 
-.search_container_head{
+.search_container_head {
     padding-right: 30px;
     max-width: 100%;
     padding-left: 10px;
     flex: 1 1 auto;
     width: 100%;
     height: 48px;
-    
+
 }
 
 
-.search_form{
+.search_form {
     margin-left: 0;
     margin-right: 0;
     background: #f1f3f4;
@@ -169,10 +170,10 @@ header{
     border-radius: 8px;
     max-width: 360px;
     position: relative;
-    transition: background 100ms ease-in,width 100ms ease-out;
+    transition: background 100ms ease-in, width 100ms ease-out;
 }
 
-.container_search_field{
+.container_search_field {
     height: 46px;
     padding: 0;
     margin-left: 56px;
@@ -180,7 +181,7 @@ header{
     overflow: hidden;
 }
 
-.for_height{
+.for_height {
     padding: 0;
     height: 46px;
     line-height: 46px;
@@ -193,29 +194,29 @@ header{
     box-sizing: border-box;
 }
 
-.unknown_reason{
+.unknown_reason {
     height: 100%;
 }
 
-.height_another{
+.height_another {
     height: 100%;
 }
-.last_div{
+
+.last_div {
     height: 100%;
     display: block;
     line-height: 46px;
     flex: 1;
 }
 
-.before_input{
+.before_input {
     position: relative;
     height: 100%;
     display: flex;
     flex: 1;
-
 }
 
-.search_box{
+.search_box {
     padding-left: 0;
     padding-right: 0;
     box-sizing: border-box;
@@ -235,11 +236,11 @@ header{
     letter-spacing: .01428571em;
 }
 
-.search_box::placeholder{
-    color:#5f6368a1;
+.search_box::placeholder {
+    color: #5f6368a1;
 }
 
-.magnifying_glass_container{
+.magnifying_glass_container {
     padding: 0 5px;
     background: none;
     border: none;
@@ -251,8 +252,19 @@ header{
     top: 0;
 }
 
+.magnifying_glass_sm {
+    padding: 0 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    line-height: 0;
+    /* float: left;
+    position: absolute;
+    top: 0; */
+}
 
-.search_button{
+.search_button {
     padding: 8px;
     margin: 3px;
     color: #5f6368;
@@ -263,7 +275,7 @@ header{
     line-height: 0;
 }
 
-.clear_container{
+.clear_container {
     padding: 0 5px;
     visibility: inherit;
     background: none;
@@ -277,7 +289,7 @@ header{
     transition: opacity 250ms ease-out;
 }
 
-.clear_button{
+.clear_button {
     padding: 8px;
     margin: 3px;
     color: #5f6368;
@@ -290,8 +302,7 @@ header{
 
 
 /* sidebar css starts here */
-.sidebar{
-
+.sidebar {
     top: 80px;
     bottom: 0;
     display: flex;
@@ -301,10 +312,9 @@ header{
     overflow-y: auto;
     /* background-color: #D3D3D3; */
     padding: 5px 0;
-
 }
 
-.sidebar_link{
+.sidebar_link {
     display: flex;
     padding-left: 20px;
     height: 100%;
@@ -323,24 +333,24 @@ header{
     color: rgba(0, 0, 0, 0.678);
 }
 
-.sidebar_link:hover{
-    background-color:rgba(174, 176, 177, 0.212);
+.sidebar_link:hover {
+    background-color: rgba(174, 176, 177, 0.212);
 }
 
 
-.nav_list{
+.nav_list {
     height: 100%;
     width: 100%;
 }
 
-.sidebar_list-menu{
+.sidebar_list-menu {
     margin: 0;
     height: 100%;
     list-style-type: disc;
     padding: 5px 0px;
 }
 
-.sidebar_list-items{
+.sidebar_list-items {
     display: block;
     line-height: 38px;
     height: 46px;
@@ -349,6 +359,94 @@ header{
     /* background-color: rgba(255, 255, 255, 0.555); */
 }
 
+/*********************** Mobile Nav CSS */
+.mobile-nav {
+    width: 100%;
+    position: relative;
+}
+
+.mobile-nav::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    height: 100%;
+    width: 36px;
+    background: linear-gradient(90deg, #00000000 0, #ffffff 50%);
+}
+
+.mobile-nav::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 36px;
+    background: linear-gradient(90deg, #ffffff 50%, #00000000 100%);
+}
+
+.mobile-nav-container {
+    display: flex;
+    height: 48px;
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.mobile-nav-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+.sidebar_list-items.nav-sm {}
+
+.sidebar_link.nav-sm {
+    font-size: 1.125rem;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    white-space: nowrap;
+}
+
+.active-sm {
+    position: relative;
+    display: flex;
+    /* padding-left: 20px; */
+    height: 100%;
+    width: 100%;
+    /* text-align: left; */
+    align-items: center;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    /* background-color: transparent; */
+    overflow: hidden;
+    text-decoration: none;
+    font-weight: bolder;
+    color: #0b57d0;
+    /* background-color: rgba(155, 179, 245, 0.226); */
+}
+
+.active-sm::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 3px 3px 0 0;
+    background-color: #0b57d0;
+}
+
+/* Ends here */
 .active {
     display: flex;
     padding-left: 20px;
@@ -370,66 +468,59 @@ header{
 }
 
 
-
-
-.link{
+.link {
     margin-left: 20px;
     letter-spacing: .4px;
 }
 
 /* side bar css ends here */
 
+/* Sidebar Media Queries */
+
 
 /* container css starts here */
 
- .container{
-    justify-content: center;
-    position: relative;
-    top: 80px;
-    height: 100vh;
+.container {
+    padding-top: 80px;
     margin-left: 275px;
-    display: block;
-    flex-direction: column;
-    flex-wrap: wrap;
-    bottom: 40px;
-    bottom: 200px;
-} 
+    padding-bottom: 24px;
+}
 
-.profile_pic{
+
+.profile_pic {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 
-.main_container{
+.main_container {
     max-width: 750px;
-    display: block
-    ;
+    display: block;
 }
 
-.container_head{
+.container_head {
     max-width: 1024px;
     padding: 0 48px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.home_info_static{
-    padding-top: 24px ;
+.home_info_static {
+    padding-top: 24px;
 
 }
 
-.basic_info{
+.basic_info {
     position: relative;
     display: flex;
     flex-direction: column;
     margin-top: 20px;
     overflow-y: auto;
-    
+
 }
 
-.scores{
+.scores {
     align-items: center;
     height: 100%;
     z-index: 3;
@@ -437,7 +528,7 @@ header{
 
 
 
-table{
+table {
     padding: 10px;
     position: relative;
     display: flex;
@@ -445,16 +536,18 @@ table{
     width: 100vw;
 }
 
-td, th {
+td,
+th {
     border: 1px solid rgba(80, 73, 73, 0.521);
     padding: 8px;
     text-align: left;
 }
 
-.overall{
+.overall {
     text-align: left;
     padding: 10px;
 }
+
 .overall h3 {
     margin-bottom: 10px;
 }
@@ -462,7 +555,7 @@ td, th {
 
 
 /* css for the informations container in home tab starts here */
-.section_info{
+.section_info {
     -webkit-box-align: stretch;
     align-items: stretch;
     display: flex;
@@ -474,14 +567,14 @@ td, th {
     -webkit-tap-highlight-color: transparent;
 }
 
-.info_container{
+.info_container {
     width: 100%;
     display: flex;
     flex-direction: column;
     -webkit-box-orient: vertical;
 }
 
-.margin_in_info{
+.margin_in_info {
     margin-left: 12px;
     margin-right: 12px;
     margin-top: 24px;
@@ -492,21 +585,21 @@ td, th {
     box-sizing: border-box;
     overflow: hidden;
     border: 1px solid #44454794;
-    
+
 }
 
-.container_for_details{
+.container_for_details {
     display: flex;
     -webkit-box-orient: vertical;
     flex-direction: column;
     width: 100%;
 }
 
-.info_heading{
+.info_heading {
     min-height: 1px;
 }
 
-.heading_padding{
+.heading_padding {
     padding-top: 24px;
     padding-left: 24px;
     padding-right: 24px;
@@ -514,11 +607,11 @@ td, th {
     padding-bottom: 8px;
 }
 
-.container_for_info{
+.container_for_info {
     display: flex;
 }
 
-.header_of_info{
+.header_of_info {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -526,7 +619,7 @@ td, th {
     flex-basis: 0;
 }
 
-.info_h2{
+.info_h2 {
     font-family: 'Product Sans', sans-serif;
     font-size: 1.375rem;
     font-weight: 400;
@@ -543,59 +636,59 @@ td, th {
     display: block;
 }
 
-.basic_info_name{
+.basic_info_name {
     min-height: 1px;
 
 }
 
-.underline_bar{
+.underline_bar {
     min-height: 10px;
     padding-left: 24px;
     transition: padding-left 15ms ease-in-out;
 
 }
 
-.user_greeting{
+.user_greeting {
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
 
-.straight_line{
+.straight_line {
     border-top: 1px solid #dadce0;
 }
 
-.for_padding_arround{
-   position: relative; 
-   outline: none;
-   overflow: hidden;
+.for_padding_arround {
+    position: relative;
+    outline: none;
+    overflow: hidden;
 }
 
-.div_for_unknown_reason{
+.div_for_unknown_reason {
     padding-left: 24px;
     padding-right: 24px;
-   padding-top: 15px;
-   padding-bottom: 16px;
-   height: 100%;
-   display: block;
-   outline-offset: -4px;
-   text-decoration: none;
+    padding-top: 15px;
+    padding-bottom: 16px;
+    height: 100%;
+    display: block;
+    outline-offset: -4px;
+    text-decoration: none;
 }
 
-.for_justify{
+.for_justify {
     -webkit-box-align: center;
     align-items: center;
     display: flex;
 }
 
-.a_line{
+.a_line {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 0;
 }
 
-.seperator_div{
+.seperator_div {
     -webkit-box-align: stretch;
     align-items: stretch;
     display: flex;
@@ -603,7 +696,7 @@ td, th {
     margin-top: -4px;
 }
 
-.for_attribute{
+.for_attribute {
     flex-basis: 156px;
     -webkit-box-align: center;
     align-items: center;
@@ -611,15 +704,16 @@ td, th {
     margin-right: 24px;
     padding-top: 4px;
 }
-.finally{
-  -webkit-box-align: center;  
-  align-items: center;
-  display: flex;
-  padding-top: 4px;
+
+.finally {
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    padding-top: 4px;
 
 }
 
-.info_h3{
+.info_h3 {
     font-size: .9rem;
     font-weight: 500;
     line-height: 1rem;
@@ -634,7 +728,7 @@ td, th {
 
 }
 
-.for_value{
+.for_value {
     flex-basis: 328px;
     flex-grow: 1;
     flex-shrink: 1;
@@ -642,7 +736,7 @@ td, th {
 
 }
 
-.finally_value{
+.finally_value {
     -webkit-box-align: center;
     align-items: center;
     display: flex;
@@ -650,7 +744,7 @@ td, th {
 
 }
 
-.finally_value div{
+.finally_value div {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5rem;
@@ -668,7 +762,7 @@ td, th {
 
 /* css for the score section starts here */
 
-.section_for_scores{
+.section_for_scores {
     -webkit-box-align: stretch;
     align-items: stretch;
     display: flex;
@@ -681,7 +775,7 @@ td, th {
 
 /* css for the score section ends here */
 /* css for the experiment tables start her */
-.exp_tables{
+.exp_tables {
     height: 400px;
     width: 100%;
     /* background-color: black ; */
@@ -692,7 +786,7 @@ td, th {
 
 /* css for the analytics starts here */
 
-.container_for_all{
+.container_for_all {
     max-width: 1120px;
     padding-left: 48px;
     padding-right: 48px;
@@ -701,16 +795,17 @@ td, th {
 
 }
 
-.for_margin_right{
+.for_margin_right {
     max-width: 840px;
 
 }
 
-.all_container_header{
+.all_container_header {
     padding-top: 24px;
     display: block;
 }
-.main_container_heading{
+
+.main_container_heading {
     display: block;
     text-align: center;
     padding: 0;
@@ -719,7 +814,7 @@ td, th {
 }
 
 
-.section_for_analytics{
+.section_for_analytics {
     align-items: stretch;
     -webkit-box-align: stretch;
     display: flex;
@@ -731,10 +826,8 @@ td, th {
 }
 
 
-@media (min-width:743px)
-
- {
-     .chartBox {
+@media (min-width:743px) {
+    .chartBox {
         width: 100%;
         display: flex;
         -webkit-box-align: vertical;
@@ -743,20 +836,18 @@ td, th {
     }
 }
 
-@media (min-width:1024px) 
-
-{
-    .chartBox{
+@media (min-width:1024px) {
+    .chartBox {
         width: 50%;
         display: flex;
         -webkit-box-align: vertical;
         flex-direction: column;
-        
+
     }
 }
 
 
-.for_margin_border{
+.for_margin_border {
     margin-left: 12px;
     margin-right: 12px;
     margin-top: 24px;
@@ -776,7 +867,7 @@ td, th {
 /* css for the analytics ends here */
 /* css for cocurriculum starts here */
 
-.section_for_cocurriculum{
+.section_for_cocurriculum {
     -webkit-box-align: stretch;
     align-items: stretch;
     display: flex;
@@ -787,7 +878,7 @@ td, th {
     padding-bottom: 20px;
 }
 
-.container_for_sport{
+.container_for_sport {
     width: 100%;
     display: flex;
     -webkit-box-orient: vertical;
@@ -796,7 +887,7 @@ td, th {
 }
 
 
-.container_for_other{
+.container_for_other {
     width: 50%;
     display: flex;
     -webkit-box-orient: vertical;
@@ -846,7 +937,7 @@ td, th {
     }
 } */
 
-.for_margin_all{
+.for_margin_all {
     margin-left: 12px;
     margin-right: 12px;
     margin-top: 24px;
@@ -861,19 +952,19 @@ td, th {
 
 }
 
-.for_deviding_all{
+.for_deviding_all {
     display: flex;
     -webkit-box-orient: vertical;
     flex-direction: column;
     width: 100%;
 }
 
-.container_for_upside_all{
+.container_for_upside_all {
     min-height: 1px;
 
 }
 
-.for_upside_all{
+.for_upside_all {
     padding-top: 24px;
     padding-left: 24px;
     padding-right: 24px;
@@ -883,11 +974,12 @@ td, th {
     display: block;
 }
 
-.for_header{
+.for_header {
     display: flex;
 
 }
-.for_deviding_upside{
+
+.for_deviding_upside {
     display: flex;
     -webkit-box-orient: vertical;
     flex-direction: column;
@@ -896,7 +988,7 @@ td, th {
     flex-basis: 0;
 }
 
-.heading_for_all{
+.heading_for_all {
     font-size: 1.375rem;
     font-weight: 400;
     letter-spacing: 0;
@@ -911,7 +1003,7 @@ td, th {
     padding: 0;
 }
 
-.for_sport_icons{
+.for_sport_icons {
     flex-grow: 1;
     flex-shrink: 1;
     letter-spacing: .01428571em;
@@ -927,7 +1019,7 @@ td, th {
     display: flex;
 }
 
-.for_co_grades{
+.for_co_grades {
     flex-grow: 1;
     flex-shrink: 1;
     letter-spacing: .01428571em;
@@ -943,7 +1035,7 @@ td, th {
     display: flex;
 }
 
-.div_for_grades{
+.div_for_grades {
     flex-grow: 1;
     flex-shrink: 1;
     letter-spacing: .01428571em;
@@ -968,7 +1060,7 @@ td, th {
 
 
 
-.main_score_icon{
+.main_score_icon {
     width: 48px;
     height: 48px;
     -webkit-box-align: center;
@@ -986,14 +1078,14 @@ td, th {
 
 
 
-.grade_for_icons{
+.grade_for_icons {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
 }
 
-.sport_icons_list{
+.sport_icons_list {
     display: flex;
     -webkit-box-orient: vertical;
     flex-direction: column;
@@ -1008,28 +1100,29 @@ td, th {
 
 
 
-.container_for_outcome_all{
+.container_for_outcome_all {
     margin-top: auto;
     min-height: 1px;
 
 }
 
-.for_straight_line{
+.for_straight_line {
     padding-left: 0;
     transition: padding-left 15ms ease-in-out;
 }
 
-.for_straight_line div{
+.for_straight_line div {
     border-top: 1px solid #dadce0;
 }
 
-.for_outcome_all{
+.for_outcome_all {
     position: relative;
     outline: none;
     overflow: hidden;
 
 }
-.main_outcome{
+
+.main_outcome {
     padding-bottom: 18px;
     padding-top: 17px;
     padding-left: 24px;
@@ -1039,7 +1132,7 @@ td, th {
     display: block;
 }
 
-.outcome_of_all{
+.outcome_of_all {
     letter-spacing: .01785714em;
     font-size: .875rem;
     font-weight: 500;
@@ -1049,10 +1142,11 @@ td, th {
     word-wrap: break-word;
     color: #1a73e8;
 }
+
 /* css for cocurriculum ends here */
 /* css for remark start here */
 
-.section_for_remark{
+.section_for_remark {
     -webkit-box-orient: stretch;
     align-items: stretch;
     display: flex;
@@ -1064,7 +1158,7 @@ td, th {
 
 }
 
-.deviding_section{
+.deviding_section {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1075,7 +1169,7 @@ td, th {
 
 
 
-.container_for_margin{
+.container_for_margin {
     margin-left: 12px;
     margin-right: 12px;
     margin-top: 24px;
@@ -1089,18 +1183,19 @@ td, th {
     background-color: white;
 
 }
-.container_for_remark_detail{
+
+.container_for_remark_detail {
     display: flex;
     -webkit-box-orient: vertical;
     flex-direction: column;
     width: 100%;
 }
 
-.for_remark_heading{
+.for_remark_heading {
     min-height: 1px;
 }
 
-.remark_heading_padding{
+.remark_heading_padding {
     padding-top: 24px;
     padding-left: 24px;
     padding-right: 24px;
@@ -1108,7 +1203,7 @@ td, th {
     padding-bottom: 8px;
 }
 
-.main_remark_heading{
+.main_remark_heading {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -1117,7 +1212,7 @@ td, th {
     padding-left: 10px;
 }
 
-.remark_h2{
+.remark_h2 {
     font-family: 'Product Sans', sans-serif;
     font-size: 1.375rem;
     font-weight: 400;
@@ -1138,17 +1233,18 @@ td, th {
 
 
 /* css for based on performance section starts here for remark tab */
-.container_for_perRemark{
+.container_for_perRemark {
     min-height: 1px;
 
 }
-.for_divControll{
+
+.for_divControll {
     position: relative;
     outline: none;
     overflow: hidden;
 }
 
-.for_main_remark_padding{
+.for_main_remark_padding {
     padding-top: 24px;
     padding-left: 24px;
     padding-right: 24px;
@@ -1160,18 +1256,19 @@ td, th {
     display: block;
 }
 
-.for_icon_and_remark{
+.for_icon_and_remark {
     -webkit-box-align: center;
     align-items: center;
     display: flex;
 }
 
-.for_remark_icon_margin{
+.for_remark_icon_margin {
     flex-grow: 0;
     flex-shrink: 0;
     margin-right: 16px;
 }
-.div_for_remark_icon{
+
+.div_for_remark_icon {
     width: 48px;
     height: 48px;
     -webkit-box-align: center;
@@ -1184,12 +1281,13 @@ td, th {
     overflow: hidden;
 }
 
-.for_remark_feedback{
+.for_remark_feedback {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 0;
 }
-.for_icon_label_feedback{
+
+.for_icon_label_feedback {
     -webkit-box-align: stretch;
     align-items: center;
     display: flex;
@@ -1197,7 +1295,7 @@ td, th {
     margin-top: -4px;
 }
 
-.for_icon_label_margin{
+.for_icon_label_margin {
     flex-basis: 160px;
     flex-grow: 1;
     flex-shrink: 1;
@@ -1209,14 +1307,14 @@ td, th {
     margin-right: 24px;
 }
 
-.for_label_padding{
+.for_label_padding {
     -webkit-box-align: center;
     align-items: center;
     display: flex;
     padding-top: 4px;
 }
 
-.remark_label_heading{
+.remark_label_heading {
     letter-spacing: .00625em;
     font-family: 'Product Sans', sans-serif;
     font-size: 1rem;
@@ -1231,7 +1329,7 @@ td, th {
     width: 100%;
 }
 
-.for_feedback_container{
+.for_feedback_container {
     flex-basis: 160px;
     flex-grow: 1;
     flex-shrink: 1;
@@ -1242,14 +1340,14 @@ td, th {
     justify-content: center;
 }
 
-.for_feedback_padding{
+.for_feedback_padding {
     -webkit-box-align: center;
     align-items: center;
     display: flex;
     padding-top: 4px;
 }
 
-.main_feedback_container{
+.main_feedback_container {
     letter-spacing: .01428571em;
     font-family: 'Product Sans', sans-serif;
     font-size: .875rem;
@@ -1261,44 +1359,51 @@ td, th {
     color: #1a73e8;
     width: 100%;
 }
+
 /* css for based on performance section ends here for remark tab */
 
 /* css for teacher's view section in ramark tab starts here */
-.teacher_view_container{
-   min-height: 1px; 
+.teacher_view_container {
+    min-height: 1px;
 }
-.for_padding_teacherview{
+
+.for_padding_teacherview {
     height: 100%;
     padding-bottom: 8px;
     padding-top: 8px;
 }
-.for_jscontroller_teacherview{
+
+.for_jscontroller_teacherview {
     overflow: hidden;
     position: relative;
 }
-.for_main_devider_teacherview{
+
+.for_main_devider_teacherview {
     display: flex;
     overflow-x: scroll;
     position: relative;
     -webkit-overflow-scrolling: touch;
 }
+
 /* .for_main_devider_teacherview::-webkit-scrollbar{
     display: none;
 } */
 
-.div_for_teacherview_padding{
+.div_for_teacherview_padding {
     display: flex;
     padding-bottom: 16px;
     padding-left: 16px;
     padding-right: 16px;
     padding-top: 16px;
 }
-.container_for_teacher1{
+
+.container_for_teacher1 {
     width: 156px;
     flex-shrink: 0;
     border-radius: 8px;
 }
-.for_padding_teacher1{
+
+.for_padding_teacher1 {
     -webkit-box-align: center;
     align-items: center;
     display: flex;
@@ -1310,7 +1415,8 @@ td, th {
     position: relative;
     width: 100%;
 }
-.for_margin_teacher1_img{
+
+.for_margin_teacher1_img {
     width: 48px;
     height: 48px;
     -webkit-box-align: center;
@@ -1321,7 +1427,8 @@ td, th {
     flex-grow: 0;
     flex-shrink: 0;
 }
-.main_img_container{
+
+.main_img_container {
     width: 48px;
     height: 48px;
     -webkit-box-align: center;
@@ -1334,21 +1441,22 @@ td, th {
     padding: 0;
 }
 
-.for_teacher1_name_department{
+.for_teacher1_name_department {
     display: flex;
     -webkit-box-orient: vertical;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.for_name_teacher1{
+
+.for_name_teacher1 {
     -webkit-box-align: center;
     align-items: center;
     display: flex;
     max-width: 100%;
 }
 
-.for_main_name{
+.for_main_name {
     text-align: center;
     letter-spacing: .00625em;
     font-family: 'Product Sans', sans-serif;
@@ -1364,7 +1472,7 @@ td, th {
     width: 100%;
 }
 
-.for_quote_teacher1{
+.for_quote_teacher1 {
     -webkit-box-align: center;
     align-items: center;
     display: flex;
@@ -1372,7 +1480,8 @@ td, th {
     margin-bottom: 30px;
     max-width: 100%;
 }
-.for_main_quote{
+
+.for_main_quote {
     text-align: center;
     text-align: center;
     letter-spacing: .00625em;
@@ -1390,13 +1499,14 @@ td, th {
 
 }
 
-.container_for_teacher2{
+.container_for_teacher2 {
     width: 156px;
     margin-left: 12px;
     flex-shrink: 0;
     border-radius: 8px;
 }
-.fot_span{
+
+.fot_span {
     display: none;
     left: 12px;
     -webkit-box-align: center;
@@ -1413,7 +1523,7 @@ td, th {
     top: 50%;
 }
 
-.for_span span{
+.for_span span {
     opacity: .55;
     padding: 6px;
     transition: opacity .3s ease-in-out;
@@ -1445,14 +1555,14 @@ td, th {
     position: fixed;
 } */
 
-.achievement_navigation_header{
-    background-color: rgba(255,255,255,0.96);
+.achievement_navigation_header {
+    background-color: rgba(255, 255, 255, 0.96);
     border-bottom: 1px solid #dadce0;
     transition: border .25s;
     width: 100%;
 }
 
-.achievement_navigation_menu{
+.achievement_navigation_menu {
     display: flex;
     padding: 0;
     margin: 0;
@@ -1460,7 +1570,7 @@ td, th {
     overflow-x: auto;
 }
 
-.achievement_list_item{
+.achievement_list_item {
     padding-left: 24px;
     padding-right: 24px;
     display: flex;
@@ -1474,7 +1584,8 @@ td, th {
     margin: 0 auto;
     padding: 0 16px;
 }
-.link_for_certificates{
+
+.link_for_certificates {
     align-items: center;
     display: flex;
     position: relative;
@@ -1482,7 +1593,8 @@ td, th {
     text-decoration: none;
     /* display: block; */
 }
-.for_header_figure{
+
+.for_header_figure {
     -webkit-box-align: center;
     align-items: center;
     display: flex;
@@ -1497,7 +1609,7 @@ td, th {
 
 }
 
-.main_figure{
+.main_figure {
     width: 24px;
     height: 24px;
     -webkit-box-align: center;
@@ -1511,10 +1623,11 @@ td, th {
 }
 
 
-a:-webkit-any-link{
+a:-webkit-any-link {
     cursor: pointer;
 }
-.for_achievment_label{
+
+.for_achievment_label {
     letter-spacing: .01785714em;
     font-family: 'Product Sans', sans-serif;
     font-size: .875rem;
@@ -1530,22 +1643,24 @@ a:-webkit-any-link{
     white-space: nowrap;
 }
 
-.underline_bar_achievement{
+.underline_bar_achievement {
     min-height: 10px;
     padding-left: 88px;
     transition: padding-left 15ms ease-in-out;
 }
 
-.straight_line_achievement{
+.straight_line_achievement {
     border-top: 1px solid #dadce0;
 }
-.container_for_download_icon{
+
+.container_for_download_icon {
     flex-grow: 0;
     flex-shrink: 0;
     margin-left: 16px;
     color: forestgreen;
 }
-.main_icon_download{
+
+.main_icon_download {
     align-items: center;
     display: flex;
     -webkit-box-pack: center;
@@ -1556,7 +1671,7 @@ a:-webkit-any-link{
     width: 24px;
 }
 
-.main_feedback_container_achievement{
+.main_feedback_container_achievement {
     letter-spacing: .01428571em;
     font-family: 'Product Sans', sans-serif;
     font-size: .875rem;
@@ -1568,30 +1683,27 @@ a:-webkit-any-link{
     color: #202124;
     width: 100%;
 }
-.update_status{
+
+.update_status {
     color: #5f6368;
 }
-.save_button{
+
+.save_button {
     cursor: pointer;
 }
 
 /* css for the achievement tab in the studentsite starts here */
 /* Css for the discover section in score and analytics section starts here */
 
-.container_for_discover{
+.container_for_discover {
     width: 100%;
     display: flex;
     -webkit-box-orient: vertical;
     flex-direction: column;
 }
 
-.container_for_discover_header{
-    margin-left: 12px;
-    margin-right: 12px;
-    margin-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    margin-top: 32px;
+.container_for_discover_header {
+    margin: 32px 12px 0;
     position: relative;
     padding: 32px 8px 0;
     display: flex;
@@ -1602,13 +1714,14 @@ a:-webkit-any-link{
     -webkit-box-pack: justify;
     justify-content: space-between;
 }
-.container_discover_heading{
+
+.container_discover_heading {
     flex-grow: 1;
     flex-shrink: 1;
 
 }
 
-.another_container_discover_heading{
+.another_container_discover_heading {
     display: flex;
     -webkit-box-align: center;
     align-items: center;
@@ -1616,7 +1729,7 @@ a:-webkit-any-link{
     justify-content: space-between;
 }
 
-.main_heading_of_discover{
+.main_heading_of_discover {
     font-size: 1.75rem;
     font-weight: 400;
     letter-spacing: 0;
@@ -1630,10 +1743,10 @@ a:-webkit-any-link{
     margin-bottom: 0;
 }
 
-.container_for_description{
+.container_for_description {
     margin: 0;
     letter-spacing: .00625em;
-    font-family: 'Product Sans',sans-serif;
+    font-family: 'Product Sans', sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5rem;
@@ -1645,7 +1758,7 @@ a:-webkit-any-link{
 
 }
 
-.container_for_svg{
+.container_for_svg {
     display: block;
     width: 360px;
     height: 128px;
@@ -1660,7 +1773,8 @@ a:-webkit-any-link{
     overflow: hidden;
     padding: 0;
 }
-.main_svg_discover{
+
+.main_svg_discover {
     height: 100%;
     width: auto;
     border: none;
@@ -1668,14 +1782,14 @@ a:-webkit-any-link{
 }
 
 /* css for the discover content starts her */
-.container_for_discover_content{
+.container_for_discover_content {
     display: flex;
     -webkit-box-orient: vertical;
     flex-direction: column;
     width: 100%;
 }
 
-.for_discover_content_margin{
+.for_discover_content_margin {
     margin-left: 12px;
     margin-right: 12px;
     margin-top: 24px;
@@ -1689,7 +1803,8 @@ a:-webkit-any-link{
     overflow: hidden;
 
 }
-.for_content_header_devider{
+
+.for_content_header_devider {
     display: flex;
     -webkit-box-orient: vertical;
     flex-direction: column;
@@ -1697,14 +1812,14 @@ a:-webkit-any-link{
 
 }
 
-.for_content_header_and_button{
+.for_content_header_and_button {
     min-height: 1px;
     position: relative;
     outline: none;
     overflow: hidden;
 }
 
-.for_content_description_heading{
+.for_content_description_heading {
     padding-top: 24px;
     padding-left: 24px;
     padding-right: 24px;
@@ -1712,17 +1827,18 @@ a:-webkit-any-link{
     padding-bottom: 8px;
 }
 
-.button_for_content_link{
-   flex-grow: 0;
-   flex-shrink: 0;
-   margin-left: 16px;
-  
+.button_for_content_link {
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-left: 16px;
+
 }
 
-.figure_for_more:hover{
+.figure_for_more:hover {
     background-color: #afb2b42a;
 }
-.figure_for_more{
+
+.figure_for_more {
     -webkit-box-align: center;
     align-items: center;
     display: flex;
@@ -1735,7 +1851,7 @@ a:-webkit-any-link{
     border-radius: 100%;
 }
 
-.link_for_more{
+.link_for_more {
     color: #5f6368;
     cursor: pointer;
     height: 100%;
@@ -1743,13 +1859,14 @@ a:-webkit-any-link{
 }
 
 
-.heading_header{
-   display: flex;
-   align-items: center;
-   -webkit-box-align: center;
+.heading_header {
+    display: flex;
+    align-items: center;
+    -webkit-box-align: center;
 
 }
-.header_h3{
+
+.header_h3 {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 0;
@@ -1758,7 +1875,7 @@ a:-webkit-any-link{
 
 
 
-.h3_of_content{
+.h3_of_content {
     font-family: 'Product Sans', sans-serif;
     font-size: 1.375rem;
     font-weight: 400;
@@ -1773,16 +1890,17 @@ a:-webkit-any-link{
     margin-bottom: 0;
 }
 
-.for_content_description{
+.for_content_description {
     min-height: 1px;
     position: relative;
     outline: none;
     overflow: hidden;
 }
-.container_for_more_description{
+
+.container_for_more_description {
     margin: 0;
     letter-spacing: .00625em;
-    font-family: 'Product Sans',sans-serif;
+    font-family: 'Product Sans', sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5rem;
@@ -1792,38 +1910,23 @@ a:-webkit-any-link{
     color: #5f6368;
     margin-top: 0;
 }
-    
 
 
-.for_main_content_description{
+
+.for_main_content_description {
     padding-top: 8px;
     padding-left: 24px;
     padding-right: 50px;
     height: auto;
     padding-bottom: 8px;
 }
-.for_description_flex{
+
+.for_description_flex {
     display: flex;
     align-items: center;
     -webkit-box-align: center;
     width: 50%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* css for the discover content starts her */
@@ -1835,3 +1938,73 @@ a:-webkit-any-link{
 
 
 /* container css ends here */
+
+
+/* Media Queries */
+
+@media screen and (max-width:1023px) {
+    .sidebar {
+        display: none;
+    }
+
+    .sidebar_list-items {
+        padding: 0 16px;
+    }
+
+    .sidebar_list-items:first-child {
+        padding-left: 36px;
+    }
+
+    .sidebar_list-items:last-child {
+        padding-right: 36px;
+    }
+
+    .sidebar_link {
+        padding: 0;
+        text-align: center;
+    }
+
+    .link {
+        margin: 0;
+    }
+
+    .container {
+        margin-left: 0;
+        padding-top: 150px;
+    }
+
+    .main_container {
+        margin: 0 auto;
+    }
+
+    .container_for_all,
+    .container_head {
+        padding: 0 .5rem;
+    }
+
+    .container_for_all section {
+        width: 100%;
+        margin: 0;
+    }
+
+    .for_main_remark_padding {
+        padding: 12px 0;
+    }
+
+    .container_for_discover_header {
+        flex-direction: column-reverse;
+    }
+    .for_description_flex{
+        width: 90%;
+    }
+
+}
+
+/* @media screen and (max-width:529px){
+    
+} */
+@media screen and (min-width: 1024px) {
+    .mobile-nav {
+        display: none;
+    }
+}

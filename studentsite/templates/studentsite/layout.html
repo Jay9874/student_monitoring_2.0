@@ -15,7 +15,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- new end -->
-    <link rel="shortcut icon" href="{% static 'studentsite/IIT.ico' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'loginsite/IIT.ico' %}" type="image/x-icon">
+    <!-- <link rel="shortcut icon" href="{% static 'studentsite/IIT.ico' %}" type="image/x-icon"> -->
     <link href="http://fonts.cdnfonts.com/css/product-sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta charset="UTF-8">
@@ -45,7 +46,7 @@
                     </div>
                 </div>
             </div>
-            <div class="search_container">
+            <div class="search_container" id="expanded-search">
                 <div class="search_container_head">
                     <form action="" class="search_form" role="search">
                         <div class="container_search_field">
@@ -79,53 +80,127 @@
                     </form>
                 </div>
             </div>
+            <!-- Search Icon on small screen -->
+            <button class="magnifying_glass_sm" id="search-icon-sm">
+                <div class="search_button field_button">
+                    <i class="material-icons">search</i>
+                </div>
+            </button>
+
+            <!-- Script for making small search icon and onclick expand -->
+            <script>
+                const expandedSearchBar = document.getElementById('expanded-search')
+                const searchIcon = document.getElementById('search-icon-sm')
+                function reportWindowSize() {
+                    width = window.innerWidth;
+                    if(width <= 529){
+                        expandedSearchBar.style.display = "none"
+                        searchIcon.style.display = "block"
+                    }else{
+                        expandedSearchBar.style.display = "flex"
+                        searchIcon.style.display = "none"
+                    }
+                }
+                window.onresize = reportWindowSize; 
+            </script>
         </div>
+        <!-- Mobile nav -->
+        <nav class="mobile-nav">
+            <ul class="mobile-nav-container">
+                <li class="sidebar_list-items list_item-home nav-sm">
+                    <a href="{{ url }}" {% if request.path == url %} class="active-sm" {% endif %}
+                        class="sidebar_link nav-sm">
+                        <span class="link">Home</span>
+                    </a>
+                </li>
+                <li class="sidebar_list-items list_item-scores nav-sm">
+                    <a href="{{ url1 }}" {% if request.path == url1 %} class="active-sm" {% endif %}
+                        class="sidebar_link nav-sm">
+                        <span class="link">Scores</span>
+                    </a>
+                </li>
+                <li class="sidebar_list-items list_item-analytics nav-sm">
+                    <a href="{{ url2 }}" {% if request.path == url2 %} class="active-sm" {% endif %}
+                        class="sidebar_link nav-sm">
+                        <span class="link">Analytics</span>
+                    </a>
+                </li>
+                <li class="sidebar_list-items list_item-curriculum nav-sm">
+                    <a href="{{ url3 }}" {% if request.path == url3 %} class="active-sm" {% endif %}
+                        class="sidebar_link nav-sm">
+                        <span class="link">Co-curriculum</span>
+                    </a>
+                </li>
+                <li class="sidebar_list-items list_item-achievement nav-sm">
+                    <a href="{{ url4 }}" {% if request.path == url4 %} class="active-sm" {% endif %}
+                        class="sidebar_link nav-sm">
+                        <span class="link">Achievements</span>
+                    </a>
+
+                </li>
+                <li class="sidebar_list-items list_item-remarks nav-sm">
+                    <a href="{{ url5 }}" {% if request.path == url5 %} class="active-sm" {% endif %}
+                        class="sidebar_link nav-sm">
+                        <span class="link">Remarks</span>
+                    </a>
+
+                </li>
+                <li class="sidebar_list-items list_item-setting nav-sm">
+                    <a class="sidebar_link nav-sm" href="#">
+                        <span class="link">Settings</span>
+                    </a>
+
+                </li>
+                <li class="sidebar_list-items list_item-logout nav-sm">
+                    <a class="sidebar_link nav-sm" href="{% url 'logout' %}">
+                        <span class="link">Logout</span>
+                    </a>
+
+                </li>
+            </ul>
+        </nav>
         <!-- header ends here -->
     </header>
+    <!-- Small screen navbar -->
+
 
     <div class="sidebar">
         <div class="nav_list">
             <ul class="sidebar_list-menu">
                 <li class="sidebar_list-items list_item-home">
-                    <a href="{{ url }}"{% if request.path == url %} class="active"{% endif %} class="sidebar_link" >
+                    <a href="{{ url }}" {% if request.path == url %} class="active" {% endif %} class="sidebar_link">
                         <i class="material-icons">account_circle</i>
                         <span class="link">Home</span>
                     </a>
                 </li>
-                <li
-                    class="sidebar_list-items list_item-scores">
-                    <a href="{{ url1 }}"{% if request.path == url1 %} class="active"{% endif %} class="sidebar_link">
+                <li class="sidebar_list-items list_item-scores">
+                    <a href="{{ url1 }}" {% if request.path == url1 %} class="active" {% endif %} class="sidebar_link">
                         <i class="material-icons">table_chart</i>
-                        <!-- <i class='bx bx-book-open'></i> -->
                         <span class="link">Scores</span>
                     </a>
                 </li>
                 <li class="sidebar_list-items list_item-analytics">
-                    <a href="{{ url2 }}"{% if request.path == url2 %} class="active"{% endif %} class="sidebar_link">
+                    <a href="{{ url2 }}" {% if request.path == url2 %} class="active" {% endif %} class="sidebar_link">
                         <i class="material-icons">analytics</i>
-                        <!-- <i class='bx bxs-bar-chart-alt-2'></i> -->
                         <span class="link">Analytics</span>
                     </a>
                 </li>
                 <li class="sidebar_list-items list_item-curriculum">
-                    <a href="{{ url3 }}"{% if request.path == url3 %} class="active"{% endif %} class="sidebar_link">
+                    <a href="{{ url3 }}" {% if request.path == url3 %} class="active" {% endif %} class="sidebar_link">
                         <i class="material-icons">sports</i>
-                        <!-- <i class='bx bx-run'></i> -->
                         <span class="link">Co-curriculum</span>
                     </a>
                 </li>
                 <li class="sidebar_list-items list_item-achievement">
-                    <a href="{{ url4 }}"{% if request.path == url4 %} class="active"{% endif %} class="sidebar_link">
+                    <a href="{{ url4 }}" {% if request.path == url4 %} class="active" {% endif %} class="sidebar_link">
                         <i class="material-icons">workspace_premium</i>
-                        <!-- <i class='bx bx-medal'></i> -->
                         <span class="link">Achievements</span>
                     </a>
 
                 </li>
                 <li class="sidebar_list-items list_item-remarks">
-                    <a href="{{ url5 }}"{% if request.path == url5 %} class="active"{% endif %} class="sidebar_link">
+                    <a href="{{ url5 }}" {% if request.path == url5 %} class="active" {% endif %} class="sidebar_link">
                         <i class="material-icons">gpp_good</i>
-                        <!-- <i class='bx bx-notepad'></i> -->
                         <span class="link">Remarks</span>
                     </a>
 
@@ -133,7 +208,6 @@
                 <li class="sidebar_list-items list_item-setting">
                     <a class="sidebar_link" href="#">
                         <i class="material-icons">settings</i>
-                        <!-- <i class='bx bxs-cog'></i> -->
                         <span class="link">Settings</span>
                     </a>
 
@@ -142,7 +216,6 @@
 
                     <a class="sidebar_link" href="{% url 'logout' %}">
                         <i class="material-icons">logout</i>
-                        <!-- <i class='bx bx-log-out'></i> -->
                         <span class="link">Logout</span>
                     </a>
 
