@@ -24,7 +24,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/e8aac5ac55.js" crossorigin="anonymous"></script>
     <title>Academics</title>
     <link rel="stylesheet" href="{% static 'studentsite/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
@@ -102,6 +101,14 @@
                     }
                 }
                 window.onresize = reportWindowSize; 
+                const initialWidth = screen.width
+                if(initialWidth <= 529){
+                        expandedSearchBar.style.display = "none"
+                        searchIcon.style.display = "block"
+                    }else{
+                        expandedSearchBar.style.display = "flex"
+                        searchIcon.style.display = "none"
+                }
             </script>
         </div>
         <!-- Mobile nav -->
