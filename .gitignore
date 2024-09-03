@@ -61,6 +61,9 @@ lib64/
 parts/ 
 sdist/ 
 var/ 
+bin/
+include/
+*pyenv.cfg
 wheels/ 
 *.egg-info/ 
 .installed.cfg 

@@ -1,12 +1,17 @@
 asgiref==3.8.1
 Brotli==1.1.0
+click==8.1.7
 dj-database-url==2.2.0
 Django==4.2.15
 django-active-link==0.1.8
 gunicorn==20.1.0
+h11==0.14.0
 Pillow==9.5.0
 psycopg2-binary==2.9.9
 python-dotenv==1.0.1
+setuptools==73.0.1
 sqlparse==0.5.1
 typing_extensions==4.12.2
+uvicorn==0.30.6
+wheel==0.44.0
 whitenoise==6.7.0
