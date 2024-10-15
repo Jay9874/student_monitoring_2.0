@@ -22,7 +22,7 @@ class Student(models.Model):
     email = models.EmailField(blank=False, null=True, default="")
     residence = models.TextField(default=0, null=False)
     url = models.URLField(max_length=200, null=True, blank=True)
-    profile_pic = models.ImageField(upload_to='', default="", blank=False)
+    profile_pic = models.ImageField(upload_to='', default="", blank=True)
     birthday = models.DateField( blank=False, null=True)
 
     objects = models.Manager()
